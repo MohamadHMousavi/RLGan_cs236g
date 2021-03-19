@@ -46,8 +46,8 @@ def parse_args(args):
     parser.add_argument("--max_episodes_steps", default=5, type=int)  # Frequency of delayed policy updates
 
     parser.add_argument("--max_timesteps", default=1e6, type=float)  # Max time steps to run environment for
-    parser.add_argument("--start_timesteps", default=50, type=int)  # How many time steps random policy is run for
-    parser.add_argument("--eval_freq", default=5e3, type=float)  # How often (time steps) we evaluate
+    parser.add_argument("--start_timesteps", default=500, type=int)  # How many time steps random policy is run for
+    parser.add_argument("--eval_freq", default=50, type=float)  # How often (time steps) we evaluate
 
     parser.add_argument("--save_models", default=True)  # Save Pytorch Models?
 
@@ -71,7 +71,7 @@ def parse_args(args):
     parser.add_argument('--test', help='test model.', action='store_true')
 
     parser.add_argument('--load_model', help='Use saved model.', action='store_true')
-    parser.add_argument('--model_name', type=str, default='RL')
+    parser.add_argument('--model_name', type=str, default='RL_5000')
 
     return parser.parse_args(args)
 
